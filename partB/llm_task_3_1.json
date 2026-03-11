@@ -1,0 +1,106 @@
+{
+  "student_metadata": {
+    "name": "Yashi Gupta",
+    "roll_number": "230072",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "task": "Task 3.1",
+    "submission_date": "2026-03-11"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-09",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 3.1",
+      "purpose": "Understand what makes a meaningful ablation study",
+      "prompt": "I need to design ablation experiments for IEThresh. What makes a good ablation vs a trivial one? Like, if I just remove the entire oracle selection and pick randomly, is that too drastic to count as an ablation? Where's the line between an ablation and a baseline comparison?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Explained that a good ablation removes one specific component while keeping everything else the same, so you can measure that component's contribution. Removing everything at once is more like a baseline comparison. This helped me design more targeted ablations.",
+      "student_verification": "Looked at ablation studies in other papers from the course reading list to see how they structure them. The AI's guidance was consistent with standard practice.",
+      "confidence_level": 4,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-10",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 3.1",
+      "purpose": "Evaluate specific ablation ideas for IEThresh",
+      "prompt": "For my IEThresh ablation, I'm thinking of two options: (1) remove the threshold mechanism so it always queries all oracles, and (2) remove the variance term from the upper confidence bound so it only uses the mean estimated accuracy. Are these meaningful ablations or am I missing better ones?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Confirmed both are reasonable ablations. Removing the threshold tests whether the cost-saving mechanism matters. Removing the variance term tests whether exploration (the confidence width) contributes to oracle selection quality. Suggested a third option I hadn't thought of: using a fixed exploration schedule instead of the adaptive one.",
+      "student_verification": "Went back to the algorithm and traced through what each ablation would change in the decision-making process. Both remove exactly one component while leaving the rest intact, which is what I wanted.",
+      "confidence_level": 4,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-10",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 3.1",
+      "purpose": "Interpret ablation results where removing a component didn't hurt much",
+      "prompt": "I ran my ablation where I removed the threshold from IEThresh (so it always queries multiple oracles) and the accuracy is only slightly worse than full IEThresh. But the number of oracle queries is way higher. How should I interpret this? Does this mean the threshold isn't important?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Pointed out that the threshold's main contribution is efficiency, not accuracy. If accuracy is similar but the query cost is much higher without the threshold, that actually validates the threshold's purpose — it saves queries without sacrificing much accuracy.",
+      "student_verification": "This interpretation aligns with the paper's own framing in Section 4.2 where they motivate the threshold as a way to reduce redundant queries. The threshold is about cost-effectiveness, not raw accuracy.",
+      "confidence_level": 5,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 4,
+      "date": "2026-03-11",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 3.1",
+      "purpose": "Add clear comments and markdown interpretations to ablation notebook",
+      "prompt": "My ablation notebook for Task 3.1 has all the code and plots working, but the inline comments are minimal and the interpretation paragraphs need work. Can you help me write better comments for the ablation code — especially explaining what each ablation variant does differently from the full method — and suggest how to structure the interpretation markdown cells so they clearly discuss whether the ablation affected performance and what it reveals?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested adding a comment block at the top of each ablation section explaining what component is removed and what we expect to see. For interpretations, suggested a structure: state the result, compare to expectation, explain why, connect to the paper. I followed this structure in my markdown cells.",
+      "student_verification": "Wrote all interpretation paragraphs myself following the suggested structure. Verified that each observation was consistent with my actual plots and numerical results.",
+      "confidence_level": 5,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 2,
+      "prompt": "For my IEThresh ablation, I'm thinking of two options: (1) remove the threshold mechanism so it always queries all oracles, and (2) remove the variance term from the upper confidence bound so it only uses the mean estimated accuracy. Are these meaningful ablations or am I missing better ones?",
+      "why_important": "This was the design decision that shaped my entire ablation study. Getting feedback on whether my ablation ideas were meaningful saved me from running useless experiments."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 3,
+      "prompt": "I ran my ablation where I removed the threshold from IEThresh (so it always queries multiple oracles) and the accuracy is only slightly worse than full IEThresh. But the number of oracle queries is way higher. How should I interpret this? Does this mean the threshold isn't important?",
+      "why_important": "I was confused by the results and almost wrote the wrong conclusion. The AI helped me see that the threshold is about efficiency, not accuracy."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 1,
+      "prompt": "I need to design ablation experiments for IEThresh. What makes a good ablation vs a trivial one? Like, if I just remove the entire oracle selection and pick randomly, is that too drastic to count as an ablation? Where's the line between an ablation and a baseline comparison?",
+      "why_important": "Foundational understanding that guided how I designed the ablation experiments."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this task.",
+    "understanding_acknowledged": true,
+    "signature": "Yashi Gupta",
+    "date": "2026-03-11"
+  }
+}

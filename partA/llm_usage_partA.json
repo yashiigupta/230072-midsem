@@ -7,22 +7,19 @@
     "part": "Part A",
     "submission_date": "2026-03-01"
   },
-
   "llm_tools_used": [
     {
       "tool_name": "ChatGPT",
-      "model": "GPT-4",
+      "model": "GPT-5",
       "provider": "OpenAI"
     }
   ],
-
   "full_llm_interaction_log": [
-
     {
       "interaction_id": 1,
       "date": "2026-03-01",
       "tool_name": "ChatGPT",
-      "model": "GPT-4",
+      "model": "GPT-5.2",
       "purpose": "Verifying strict compliance with Part A selection criteria including venue ranking, year window, and methodological alignment.",
       "prompt": "Part A requires selecting a paper between the year 2009-2012 and selecting based on the topics below:\n• ARIMA or time-series modeling and variants\n• Gaussian Mixture Models (GMM), EM-based clustering, or variants\n• Support Vector Machines (SVM), kernel methods, or variants\nthe paper should be published in a legitimate in a CORE A* conference or journal\nand should not be an application, benchmarking or survey paper, does my paper satisfy all this?",
       "llm_response_used": "Yes",
@@ -30,12 +27,11 @@
       "student_verification": "I independently verified the ACM KDD 2009 publication page, confirmed its CORE A* ranking, and reviewed the abstract to ensure it introduces the IEThresh algorithm rather than being a survey or benchmark paper.",
       "confidence_level": 5
     },
-
     {
       "interaction_id": 2,
       "date": "2026-03-02",
       "tool_name": "ChatGPT",
-      "model": "GPT-4",
+      "model": "GPT-5.2",
       "purpose": "Requesting a full re-evaluation to avoid disqualification and ensure zero compliance errors.",
       "prompt": "Can you please begin with a fresh mind and recheck the requirements. If i fill a wrong paper i will get disqualified, so please be clear.",
       "llm_response_used": "Yes",
@@ -43,12 +39,11 @@
       "student_verification": "I rechecked the PDF header, copyright notice, and official ACM DOI page to confirm venue and year accuracy.",
       "confidence_level": 5
     },
-
     {
       "interaction_id": 3,
       "date": "2026-03-02",
       "tool_name": "ChatGPT",
-      "model": "GPT-4",
+      "model": "GPT-5.2",
       "purpose": "Confirming correct author information from the official source to prevent metadata errors.",
       "prompt": "Can you please verify the names of the authors of the paper again, i think there seems to be some confusion between you and me on this?",
       "llm_response_used": "Yes",
@@ -56,12 +51,11 @@
       "student_verification": "I confirmed from the first page of the official KDD 2009 PDF that the authors are Pinar Donmez, Jaime G. Carbonell, and Jeff Schneider.",
       "confidence_level": 5
     },
-
     {
       "interaction_id": 4,
       "date": "2026-03-02",
       "tool_name": "ChatGPT",
-      "model": "GPT-4",
+      "model": "GPT-5.2",
       "purpose": "Assessing conceptual difficulty and preparedness for Parts B and C.",
       "prompt": "What is the difficulty level and understanding level of my selected paper, owing to the fact that the coming parts will rigorously test my knowledge of this paper?",
       "llm_response_used": "Yes",
@@ -69,12 +63,11 @@
       "student_verification": "I reviewed the IEThresh algorithm, the confidence interval formulation, and experimental methodology to ensure I understand the exploration–exploitation tradeoff clearly.",
       "confidence_level": 5
     },
-
     {
       "interaction_id": 5,
       "date": "2026-03-02",
       "tool_name": "ChatGPT",
-      "model": "GPT-4",
+      "model": "GPT-5.2",
       "purpose": "Reconfirming overall metric satisfaction and difficulty evaluation.",
       "prompt": "does my paper satisfy all metrics and how is it in difficulty",
       "llm_response_used": "Yes",
@@ -82,12 +75,11 @@
       "student_verification": "I confirmed that experiments use UCI datasets and simulated noisy labelers, making reproduction feasible on a personal laptop.",
       "confidence_level": 5
     },
-
     {
       "interaction_id": 6,
       "date": "2026-03-02",
       "tool_name": "ChatGPT",
-      "model": "GPT-4",
+      "model": "GPT-5.2",
       "purpose": "Understanding how to structure the mandatory LLM disclosure JSON file correctly.",
       "prompt": "Can you explain me about how to form a good JSON for the LLM repository part? how should i structure and how to use good pointers for the same? being completely open about all the LLM knowledge i utilised?",
       "llm_response_used": "Yes",
@@ -95,9 +87,7 @@
       "student_verification": "I cross-referenced the official exam instructions and ensured all required fields are included exactly as specified.",
       "confidence_level": 5
     }
-
   ],
-
   "top_5_prompts": [
     {
       "rank": 1,
@@ -130,7 +120,6 @@
       "why_important": "Reinforced rubric alignment and assessed reproducibility feasibility."
     }
   ],
-
   "student declaration": {
     "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Part A.",
     "understanding acknowledged": true,

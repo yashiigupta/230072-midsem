@@ -1,0 +1,85 @@
+{
+  "student_metadata": {
+    "name": "Yashi Gupta",
+    "roll_number": "230072",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "task": "Task 4.2",
+    "submission_date": "2026-03-11"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-10",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 4.2",
+      "purpose": "Clarify the required JSON format for Part B disclosure files",
+      "prompt": "For my midsem Part B, I need to create LLM usage disclosure JSON files. The format should match the Part A format but with extra fields for Part B. Can you help me understand what fields are needed? I have student_metadata, llm_tools_used, full_llm_interaction_log, top_5_prompts, and student_declaration. Is there anything I'm missing?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Confirmed the structure I had was correct and suggested I make sure each interaction has task_tag, purpose, confidence_level, and code_used_verbatim fields. I used this to create a template for all my disclosure files.",
+      "student_verification": "Compared with the Part A JSON file I already submitted and the exam instructions to make sure all required fields were present.",
+      "confidence_level": 4,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-11",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 4.2",
+      "purpose": "Check if interaction order matters in the log",
+      "prompt": "Do the interactions in my LLM disclosure JSON need to be in chronological order? Or can I group them by topic? Some of my conversations jumped between tasks.",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Suggested keeping them in chronological order within each file since each file corresponds to one task. This made the most sense since each file already groups interactions by task.",
+      "student_verification": "Checked my chat history timestamps and ordered all interactions chronologically within each task file.",
+      "confidence_level": 5,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-11",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 4.2",
+      "purpose": "Review and improve the formatting of LLM disclosure JSON files",
+      "prompt": "I've created all 10 LLM disclosure JSON files. Can you check if the formatting is consistent across all of them? Also, I want to make sure the student_verification fields read naturally and not like they were copy-pasted. Any tips on making these disclosures feel genuine and complete?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Pointed out a few inconsistencies in field naming across files and suggested varying the phrasing of student_verification to avoid repetitive language. I went through all 10 files and made the verification statements more specific to each task.",
+      "student_verification": "Reviewed all 10 JSON files myself, fixed the inconsistencies, and rewrote any verification statements that sounded too generic. Made sure each file had unique, task-specific language.",
+      "confidence_level": 5,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "For my midsem Part B, I need to create LLM usage disclosure JSON files. The format should match the Part A format but with extra fields for Part B. Can you help me understand what fields are needed? I have student_metadata, llm_tools_used, full_llm_interaction_log, top_5_prompts, and student_declaration. Is there anything I'm missing?",
+      "why_important": "Needed to get the structure right before creating 10 separate files. Getting it wrong would have meant redoing all of them."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 2,
+      "prompt": "Do the interactions in my LLM disclosure JSON need to be in chronological order? Or can I group them by topic? Some of my conversations jumped between tasks.",
+      "why_important": "Small organizational question that affected how I structured all the disclosure files."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this task.",
+    "understanding_acknowledged": true,
+    "signature": "Yashi Gupta",
+    "date": "2026-03-11"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "student_metadata": {
+    "name": "Yashi Gupta",
+    "roll_number": "230072",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "task": "Task 3.2",
+    "submission_date": "2026-03-11"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-10",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 3.2",
+      "purpose": "Identify failure modes of majority voting in the multi-oracle setup",
+      "prompt": "I'm trying to identify failure modes for IEThresh. One thing I'm thinking about is when majority vote breaks down. If most oracles are bad (say accuracy below 0.5), does majority vote actually make things worse? Like, would the majority be wrong more often than a single good oracle?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Confirmed my intuition — if the majority of oracles have accuracy below 0.5, majority vote will consistently produce wrong labels because the errors are correlated (they all lean toward the wrong class). A single good oracle would be better in this scenario. This became a key part of my failure mode analysis.",
+      "student_verification": "Worked through a simple example with 3 oracles having accuracies [0.9, 0.4, 0.3]. Majority vote is dominated by the two bad oracles, giving a combined accuracy worse than just using the 0.9 oracle alone. This matches the theoretical concern.",
+      "confidence_level": 5,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-10",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 3.2",
+      "purpose": "Explore whether below-random oracles break the reward estimation",
+      "prompt": "In IEThresh, if an oracle has accuracy below 0.5 (worse than random for binary classification), would the interval estimation still work? The reward function estimates oracle accuracy, but if accuracy is below 0.5, does the 'exploration bonus' from the upper confidence bound actually push the algorithm to query bad oracles more?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Pointed out that an oracle with accuracy below 0.5 could theoretically be useful if you invert its labels, but IEThresh doesn't do this — it just treats low-accuracy oracles as unreliable. The upper confidence bound might indeed overestimate a bad oracle's quality during early exploration, leading to wasted queries before the estimate converges.",
+      "student_verification": "Ran a simulation with one oracle at accuracy 0.3. In early rounds, IEThresh does query it more than it should because the confidence interval is wide. After about 15-20 queries, the estimate converges and it stops picking that oracle. Documented this transient waste in my report.",
+      "confidence_level": 4,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-11",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 3.2",
+      "purpose": "Improve failure mode notebook with clearer markdown explanations and code comments",
+      "prompt": "My failure mode notebook needs better documentation. The code runs and produces the plot, but I want to add clearer markdown cells that explain the failure scenario setup, why I chose these specific oracle accuracies, and how the results connect back to Assumption 1 from Task 1.2. Also the code comments are pretty bare. Can you help me write better annotations?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested adding a markdown cell at the very start describing the hypothesis (what I expect to happen and why), comments in the code where oracle accuracies are set to explain the violation of Assumption 1, and a structured interpretation paragraph at the end that explicitly names which assumption is violated and references Task 1.2.",
+      "student_verification": "Added all the markdown cells and comments myself, making sure the connection to Assumption 1 was explicit and accurate. Re-read my Task 1.2 notebook to ensure consistency between the assumption description there and the failure mode here.",
+      "confidence_level": 5,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "I'm trying to identify failure modes for IEThresh. One thing I'm thinking about is when majority vote breaks down. If most oracles are bad (say accuracy below 0.5), does majority vote actually make things worse? Like, would the majority be wrong more often than a single good oracle?",
+      "why_important": "This led directly to the main failure mode I identified and experimentally verified in my report."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 2,
+      "prompt": "In IEThresh, if an oracle has accuracy below 0.5 (worse than random for binary classification), would the interval estimation still work? The reward function estimates oracle accuracy, but if accuracy is below 0.5, does the 'exploration bonus' from the upper confidence bound actually push the algorithm to query bad oracles more?",
+      "why_important": "Helped me identify a subtle failure mode related to exploration waste that I was able to demonstrate experimentally."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this task.",
+    "understanding_acknowledged": true,
+    "signature": "Yashi Gupta",
+    "date": "2026-03-11"
+  }
+}

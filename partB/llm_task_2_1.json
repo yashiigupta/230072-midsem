@@ -1,0 +1,85 @@
+{
+  "student_metadata": {
+    "name": "Yashi Gupta",
+    "roll_number": "230072",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "task": "Task 2.1",
+    "submission_date": "2026-03-11"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-08",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 2.1",
+      "purpose": "Validate dataset choice for reproducing IEThresh experiments",
+      "prompt": "I want to reproduce the IEThresh algorithm from Donmez et al. (KDD 2009) and I'm thinking of using the UCI Mushroom dataset. The paper uses datasets with binary classification. Mushroom is binary (edible vs poisonous) and has 8124 instances. Is this a reasonable choice or should I pick something else?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Confirmed that Mushroom is a reasonable choice — binary classification, decent size, categorical features. Also mentioned that the paper uses datasets where noisy labels would have a meaningful impact, and Mushroom fits since the features are informative enough that a classifier can learn from it.",
+      "student_verification": "Checked the paper's Section 5 where they describe their experimental datasets. They use binary classification UCI datasets of similar size. Mushroom fits the criteria.",
+      "confidence_level": 5,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-08",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 2.1",
+      "purpose": "Help with loading and preprocessing mushroom data",
+      "prompt": "How do I load the mushroom dataset from UCI and preprocess it for sklearn? The features are all categorical so I need to encode them. Also the paper doesn't mention any specific preprocessing so I just need something standard.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Gave me a snippet using pandas to load the CSV and one-hot encode with pd.get_dummies(). I didn't use the code directly but followed the same approach with my own variable names and added a train-test split matching the paper's protocol.",
+      "student_verification": "Ran the preprocessing pipeline and verified the output shapes and label distribution matched what I expected from the UCI dataset description page.",
+      "confidence_level": 4,
+      "code_used_verbatim": false,
+      "student_modification": "Rewrote the loading code with my own structure, added stratified train-test split (80-20) to match the paper's evaluation setup, and added a random seed for reproducibility."
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-11",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 2.1",
+      "purpose": "Add clear inline comments and markdown annotations to data loading notebook",
+      "prompt": "I've written my data loading and preprocessing notebook for Task 2.1. Can you help me add better inline comments to the code cells and improve the markdown cells between them? I want someone reading the notebook to understand what each code block does and why, especially the parts about train/test split and the initial labeled set matching the paper's setup.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested adding a markdown cell before each code block explaining what it does in plain English, and inline comments referencing the paper's Section 4.1 where the experimental setup is described. I used these suggestions to annotate my notebook.",
+      "student_verification": "Added the comments and markdown cells myself, making sure each annotation correctly references the paper. Verified by re-reading Section 4.1 to confirm the train/test split and initialization details.",
+      "confidence_level": 5,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "I want to reproduce the IEThresh algorithm from Donmez et al. (KDD 2009) and I'm thinking of using the UCI Mushroom dataset. The paper uses datasets with binary classification. Mushroom is binary (edible vs poisonous) and has 8124 instances. Is this a reasonable choice or should I pick something else?",
+      "why_important": "Needed to validate my dataset choice before building the entire pipeline around it."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 2,
+      "prompt": "How do I load the mushroom dataset from UCI and preprocess it for sklearn? The features are all categorical so I need to encode them. Also the paper doesn't mention any specific preprocessing so I just need something standard.",
+      "why_important": "Saved time on the preprocessing boilerplate so I could focus on implementing the actual algorithm."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this task.",
+    "understanding_acknowledged": true,
+    "signature": "Yashi Gupta",
+    "date": "2026-03-11"
+  }
+}

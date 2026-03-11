@@ -1,0 +1,85 @@
+{
+  "student_metadata": {
+    "name": "Yashi Gupta",
+    "roll_number": "230072",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "task": "Task 4.1",
+    "submission_date": "2026-03-11"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-10",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 4.1",
+      "purpose": "Get guidance on report structure",
+      "prompt": "I need to write a 4-page report for a midsem exam covering my reproduction of the IEThresh paper. I have sections on: paper summary, dataset choice, implementation details, results, ablation study, failure modes, and reflection. How should I structure this to fit in 4 pages? What should I prioritize and what can I be brief about?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested allocating roughly: 0.5 pages for paper summary, 0.5 for dataset/setup, 1.5 for implementation and results, 1 for ablation and failure modes, 0.5 for reflection. I adjusted the proportions based on where I had more to say.",
+      "student_verification": "Read through the exam instructions again to make sure I wasn't missing any required sections. Adjusted the structure to match what was actually asked for in each task.",
+      "confidence_level": 3,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-10",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 4.1",
+      "purpose": "Writing advice for the reflection section",
+      "prompt": "How do I write an honest reflection about my reproduction attempt without it sounding like I failed? My results are close but not exactly matching the paper. I want to be transparent about the gaps without undermining my own work.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested framing gaps as 'findings' rather than 'failures' — e.g., 'the 3-5% accuracy gap highlights the importance of implementation details that papers often omit'. This helped me write a more constructive reflection section.",
+      "student_verification": "Wrote the reflection in my own words following this framing. Had a friend read it to check if it sounded reasonable and honest.",
+      "confidence_level": 4,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-11",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 4.1",
+      "purpose": "Proofread and improve report formatting and readability",
+      "prompt": "I've drafted my 4-page report for Part B. Can you help me improve the readability? I want cleaner section transitions, better paragraph structure, and maybe some formatting suggestions for the figures I'm including. The report needs to feel cohesive — right now the sections read a bit disconnected from each other.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested adding a one-sentence transition at the end of each section linking it to the next, using figure captions that summarize the key takeaway from each plot, and keeping paragraph lengths consistent. I used these structural suggestions while keeping all content my own.",
+      "student_verification": "Revised the report draft following the suggestions. Read through the entire report once more to make sure the flow was natural and all claims were supported by my actual experimental results.",
+      "confidence_level": 4,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 2,
+      "prompt": "How do I write an honest reflection about my reproduction attempt without it sounding like I failed? My results are close but not exactly matching the paper. I want to be transparent about the gaps without undermining my own work.",
+      "why_important": "The reflection section was the part I was most unsure about. This helped me frame my honest assessment in a constructive way."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 1,
+      "prompt": "I need to write a 4-page report for a midsem exam covering my reproduction of the IEThresh paper. I have sections on: paper summary, dataset choice, implementation details, results, ablation study, failure modes, and reflection. How should I structure this to fit in 4 pages? What should I prioritize and what can I be brief about?",
+      "why_important": "Helped me plan the report structure before writing, so I didn't run out of space on the important sections."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this task.",
+    "understanding_acknowledged": true,
+    "signature": "Yashi Gupta",
+    "date": "2026-03-11"
+  }
+}

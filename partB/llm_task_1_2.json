@@ -1,0 +1,85 @@
+{
+  "student_metadata": {
+    "name": "Yashi Gupta",
+    "roll_number": "230072",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "task": "Task 1.2",
+    "submission_date": "2026-03-11"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-07",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 1.2",
+      "purpose": "Understand what counts as a paper-specific assumption vs a generic ML assumption",
+      "prompt": "For a paper analysis task, I need to list key assumptions of the IEThresh method from Donmez et al. (KDD 2009). What counts as a 'paper-specific' assumption vs just a general ML assumption? Like, is 'i.i.d. data' too generic to mention, or should I include it?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped me distinguish between assumptions that are specific to the multi-oracle active learning setup (like oracle accuracy being fixed and instance-independent) vs generic assumptions. I focused my answer on the paper-specific ones.",
+      "student_verification": "I went back to Section 2 and Section 4.1 of the paper where the problem setup is defined. Confirmed that the oracle accuracy being constant across instances is explicitly stated as an assumption.",
+      "confidence_level": 4,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-07",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 1.2",
+      "purpose": "Locate where the independence assumption appears in the paper",
+      "prompt": "In the IEThresh paper, they assume that oracle errors are independent of each other and independent of the instance being labeled. Where exactly in the paper is this stated? I can't find an explicit sentence but the math seems to assume it.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "The AI pointed me to the reward function derivation where oracle accuracies are treated as fixed parameters. It wasn't able to give me an exact page number, but the hint about the reward function was useful.",
+      "student_verification": "Found it in Section 4.1 where they define the reward R(o_k) — the formulation treats each oracle's accuracy as a fixed scalar, which implicitly assumes independence from instances and from other oracles' labels.",
+      "confidence_level": 3,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-11",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 1.2",
+      "purpose": "Improve formatting and clarity of assumption descriptions in notebook",
+      "prompt": "I've written 3 assumptions for my Task 1.2 notebook but the markdown formatting feels inconsistent. Can you suggest a clean template for each assumption block? I want each one to have the same structure — assumption statement, why the method needs it, violation scenario, paper reference — with clear visual separation.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested using a consistent heading level for each assumption, bold labels for each sub-section, and horizontal rules between assumptions for visual clarity. I adopted the formatting style but kept all the actual content my own.",
+      "student_verification": "Reformatted all three assumption blocks in the notebook following the template. Verified that the content remained accurate by cross-checking against Section 3.2 and Section 5 of the paper.",
+      "confidence_level": 5,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "For a paper analysis task, I need to list key assumptions of the IEThresh method from Donmez et al. (KDD 2009). What counts as a 'paper-specific' assumption vs just a general ML assumption? Like, is 'i.i.d. data' too generic to mention, or should I include it?",
+      "why_important": "This helped me scope my answer correctly — focusing on assumptions unique to the multi-oracle active learning problem rather than listing generic ML boilerplate."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 2,
+      "prompt": "In the IEThresh paper, they assume that oracle errors are independent of each other and independent of the instance being labeled. Where exactly in the paper is this stated? I can't find an explicit sentence but the math seems to assume it.",
+      "why_important": "Helped me locate an implicit assumption that was important to call out but wasn't stated in plain English in the paper."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this task.",
+    "understanding_acknowledged": true,
+    "signature": "Yashi Gupta",
+    "date": "2026-03-11"
+  }
+}

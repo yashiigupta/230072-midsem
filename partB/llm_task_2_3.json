@@ -1,0 +1,85 @@
+{
+  "student_metadata": {
+    "name": "Yashi Gupta",
+    "roll_number": "230072",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "task": "Task 2.3",
+    "submission_date": "2026-03-11"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-09",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 2.3",
+      "purpose": "Understand what a reproducibility checklist should include",
+      "prompt": "I need to write a reproducibility checklist for my implementation of IEThresh. What should a good reproducibility section contain? Things like random seeds, hyperparameters, number of runs, etc. — what's standard practice?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Gave me a general checklist: random seeds, number of experimental runs, hardware, library versions, hyperparameter values, and any deviations from the original paper. I used this as a starting template but customized it for my specific experiment.",
+      "student_verification": "Cross-referenced with reproducibility guidelines from the ML Reproducibility Checklist (Pineau et al.) that was mentioned in class. The AI's suggestions were consistent with standard practice.",
+      "confidence_level": 4,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-09",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 2.3",
+      "purpose": "Interpret gap between my results and the paper's reported results",
+      "prompt": "My IEThresh implementation gets about 3-5% lower accuracy than what the paper reports at the same labeling budget. Is this a normal gap for a reproduction? The paper doesn't release code and some details are ambiguous. Should I be worried or is this expected?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Reassured me that a 3-5% gap is typical for reproductions, especially when exact implementation details aren't provided. Suggested I document the specific ambiguities I encountered and the choices I made to resolve them.",
+      "student_verification": "Looked at other reproduction studies discussed in class — gaps of 2-7% are common when reimplementing from a paper without original code. My gap falls within this range, and I documented all the ambiguities in my report.",
+      "confidence_level": 3,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-11",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5.2",
+      "task_tag": "Task 2.3",
+      "purpose": "Improve notebook markdown for results presentation and reproducibility checklist",
+      "prompt": "I need to make my Task 2.3 notebook more readable. The results comparison section is just raw numbers right now — can you suggest how to format the comparison table nicely in markdown, and how to structure the reproducibility checklist so it's clear and easy to scan? I want it to look professional.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested using a markdown table for the results comparison with columns for method, final error, and total queries. For the reproducibility checklist, suggested using checkboxes (- [x]) for each item. I used both formatting suggestions in my notebook.",
+      "student_verification": "Applied the formatting to my notebook and verified all numbers in the table matched my actual experimental outputs. Checked each reproducibility item was honestly true for my implementation.",
+      "confidence_level": 5,
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 2,
+      "prompt": "My IEThresh implementation gets about 3-5% lower accuracy than what the paper reports at the same labeling budget. Is this a normal gap for a reproduction? The paper doesn't release code and some details are ambiguous. Should I be worried or is this expected?",
+      "why_important": "I was genuinely unsure whether my implementation was wrong or if this gap was normal. This helped me interpret my results with more confidence."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 1,
+      "prompt": "I need to write a reproducibility checklist for my implementation of IEThresh. What should a good reproducibility section contain? Things like random seeds, hyperparameters, number of runs, etc. — what's standard practice?",
+      "why_important": "Helped me structure the reproducibility section of my report properly."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this task.",
+    "understanding_acknowledged": true,
+    "signature": "Yashi Gupta",
+    "date": "2026-03-11"
+  }
+}
